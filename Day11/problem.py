@@ -1,9 +1,14 @@
 def find_modes(nums):
-    mode = set()
-    for numbers in nums:
-        if nums.count(numbers) > 1:
-            mode.add(numbers)
-    return list(mode)
+    mode1 = []
+    mode = []
+    for i in range(len(nums)):
+        if nums[i] not in mode:
+            mode.append(nums[i])
+        else:
+            mode1.append(nums[i])
 
-input_list = [1, 2, 2, 3, 4]
-print(find_modes(input_list))
+    if mode == mode1:
+        return mode
+    else:
+        return mode1
+
