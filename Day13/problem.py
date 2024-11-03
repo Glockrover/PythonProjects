@@ -1,6 +1,8 @@
 def longest_zero_sum_subarray(nums):
     if nums == []:
         return list(nums)
+    elif sum(nums) == 0:
+        return nums
     else:
         array = []
         for number in range(len(nums)):
